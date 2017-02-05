@@ -4,6 +4,8 @@ This package is to add email confirmation to Laravel 5.4 project.
 
 It should be used after `php artisan make:auth` command but can also be added to existing project.
 
+There is [a french presentation](http://laravel.sillo.org/ajouter-la-confirmation-de-lemail/) of this package.
+
 ### Features ###
 
 - create a migration to add confirmation columns to users table
