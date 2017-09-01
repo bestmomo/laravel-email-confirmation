@@ -1,6 +1,6 @@
 ## Laravel Email Confirmation ##
 
-This package is to add email confirmation to Laravel 5.4 project.
+This package is to add email confirmation to Laravel 5.4 or 5.5 project.
 
 It should be used after `php artisan make:auth` command but can also be added to existing project.
 
@@ -25,7 +25,7 @@ Add package to your composer.json file :
     composer require bestmomo/laravel-email-confirmation
 ```
 
-Add service provider to `config/app.php` :
+For Laravel 5.4add service provider to `config/app.php` (with Laravel 5.5 there is the package discovery):
 ```
     Bestmomo\LaravelEmailConfirmation\ServiceProvider::class,
 ```

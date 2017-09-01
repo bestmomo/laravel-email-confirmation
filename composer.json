@@ -18,5 +18,12 @@
     "psr-4": {
       "Bestmomo\\LaravelEmailConfirmation\\": "src/"
     }
+  },
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Bestmomo\\LaravelEmailConfirmation\\ServiceProvider"
+          ]
+      }
   }
 }
