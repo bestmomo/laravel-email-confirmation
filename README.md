@@ -14,7 +14,7 @@ There is [a french presentation](http://laravel.sillo.org/ajouter-la-confirmatio
      `confirmation/{id}/{token}` 
 - add an artisan command to override login and register views
 - send email notification with registration
-- add translations for notification (there are french and english ones)
+- add translations for notification (there are french, english and arabic ones)
 - block login for not confirmed user and launch an alert with resend link for notification
 - block auto login on password reset for not confirmed user
 
