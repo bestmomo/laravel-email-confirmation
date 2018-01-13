@@ -10,11 +10,11 @@ There is [a french presentation](http://laravel.sillo.org/ajouter-la-confirmatio
 
 - create a migration to add confirmation columns to users table
 - create routes for confirmation
-     `confirmation/resend`       
-     `confirmation/{id}/{token}` 
+     `confirmation/resend`
+     `confirmation/{id}/{token}`
 - add an artisan command to override login and register views
 - send email notification with registration
-- add translations for notification (there are french, english and arabic ones)
+- add translations for notification (there are french, english, arabic, swedish and spanish translation ones)
 - block login for not confirmed user and launch an alert with resend link for notification
 - block auto login on password reset for not confirmed user
 
