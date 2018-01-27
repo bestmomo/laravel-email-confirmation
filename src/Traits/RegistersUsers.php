@@ -65,8 +65,10 @@ trait RegistersUsers
             $model = config('auth.providers.users.model');
 
             $user = $model::findOrFail($request->session()->get('user_id'));
-            $user->confirmation_code = str_random(30);
-            $user->save();
+            if (empty($user->confirmation_code)) {
+                $user->confirmation_code = str_random(30);
+                $user->save();
+            }
 
             $this->notifyUser($user);
             
