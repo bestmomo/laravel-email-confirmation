@@ -30,7 +30,8 @@ trait RegistersUsers
 
         $this->notifyUser($user);
 
-        return back()->with('confirmation-success', trans('confirmation::confirmation.message'));
+        return $this->registered($request, $user)
+            ?: back()->with('confirmation-success', trans('confirmation::confirmation.message'));
     }
 
     /**
