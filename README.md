@@ -30,7 +30,12 @@ For Laravel 5.4add service provider to `config/app.php` (with Laravel 5.5 there 
     Bestmomo\LaravelEmailConfirmation\ServiceProvider::class,
 ```
 
-Make a migration to add columns to users table :
+You can publish the migration with:
+```
+    php artisan vendor:publish --provider="Bestmomo\LaravelEmailConfirmationServiceProvider" --tag="confirmation:migrations"
+```
+
+Run the published migration:
 ```
     php artisan migrate
 ```
