@@ -30,7 +30,7 @@ class ServiceProvider extends BaseServiceProvider
 
         // Translations
         $translationsPath = $packagePath . 'publishable/translations';
-        
+
         $this->loadTranslationsFrom($translationsPath, 'confirmation');
 
         $this->publishes([
@@ -38,7 +38,12 @@ class ServiceProvider extends BaseServiceProvider
         ], 'confirmation:translations');
 
         // Migration
-        $this->loadMigrationsFrom($packagePath . 'database/migrations');
+        if (! class_exists('AddConfirmation')) {
+            $timestamp = date('Y_m_d_His', time());
+            $this->publishes([
+                __DIR__.'/../database/migrations/add_confirmation.php.stub' => $this->app->databasePath()."/migrations/{$timestamp}_add_confirmation.php",
+            ], 'confirmation:migrations');
+        }
 
         // Command
         if ($this->app->runningInConsole()) {
