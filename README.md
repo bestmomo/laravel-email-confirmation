@@ -25,7 +25,7 @@ Add package to your composer.json file :
     composer require bestmomo/laravel-email-confirmation
 ```
 
-For Laravel 5.4add service provider to `config/app.php` (with Laravel 5.5 there is the package discovery):
+For Laravel 5.4 add service provider to `config/app.php` (with Laravel 5.5 there is the package discovery):
 ```
     Bestmomo\LaravelEmailConfirmation\ServiceProvider::class,
 ```
