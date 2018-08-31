@@ -32,7 +32,7 @@ For Laravel 5.4 add service provider to `config/app.php` (with Laravel 5.5 there
 
 From V1.1.5 you must publish the migration with:
 ```
-    php artisan vendor:publish --provider="Bestmomo\LaravelEmailConfirmationServiceProvider" --tag="confirmation:migrations"
+    php artisan vendor:publish --provider="Bestmomo\LaravelEmailConfirmation\ServiceProvider" --tag="confirmation:migrations"
 ```
 
 Run the published migration:
